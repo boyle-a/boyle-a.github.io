@@ -38,7 +38,7 @@ body {
     font-weight: 200;
     font-size: 110px;
     position: absolute;
-    top: 40%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     white-space: nowrap;
@@ -133,7 +133,7 @@ nav {
 .contactContainer {
     width: 600px;
     text-align:center;
-}  
+}
 .contactContent {
     position: absolute;
    top: 50%;
@@ -141,7 +141,7 @@ nav {
    transform: translate(-50%, -50%);
     font-weight: 400;
     font-size: 40px;
-    
+
 }
 .email {
     color: grey;
@@ -178,7 +178,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
   }
-  
+
   .card.vertical {
     flex-direction: column;
     justify-content: space-between;
@@ -246,15 +246,15 @@ nav {
       font-size: 18px;
       padding: 8px 16px;
   }
-  button:active { 
-    outline: none; 
-    background-color: grey; 
+  button:active {
+    outline: none;
+    background-color: grey;
     color:white;
     border-radius: 4px;
 }
 button:hover {
-    outline: none; 
-    background-color: grey; 
+    outline: none;
+    background-color: grey;
     color:white;
     border-radius: 4px;
 }
@@ -304,7 +304,7 @@ button:hover {
   /* #background-ohyos {
     width: 400px;
     background-color: black;
-    border-radius: 5px; 
+    border-radius: 5px;
     height: 546px
     }
 
@@ -316,11 +316,11 @@ button:hover {
         padding-top: 450px;
         font-weight: 200
     }
-    
+
     #background-funty {
         width: 340px;
         background-color: black;
-        border-radius: 5px; 
+        border-radius: 5px;
         height: 444px
         }
 
@@ -341,10 +341,10 @@ button:hover {
     #background-herm {
         width: 400px;
         background-color: black;
-        border-radius: 5px; 
+        border-radius: 5px;
         height: 223px
         }
-    
+
         #herm-detail {
             color: #dbbfbc;
             width: 300px;
@@ -367,18 +367,18 @@ button:hover {
             font-size: 40px;
             margin-top: 20px;
             margin-bottom: 20px;
-          } 
+          }
         .hermContainer {
             display: flex;
             flex-direction: row;
             justify-content: center;
         }
-  
+
         #hermIm {
             width: 400px;
             margin:20px;
             border-radius: 5px;
-            
+
         }
         .hermDescription {
             width: 400px;
@@ -387,7 +387,7 @@ button:hover {
             padding-top: 50px
 
         }
-  
+
 
 /* NOODLES STYLES */
 
@@ -420,4 +420,3 @@ button:hover {
     font-size: 18px;
     margin-top: 50px;
   }
-
