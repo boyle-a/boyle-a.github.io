@@ -1,0 +1,423 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+p {
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    font-weight: 200;
+    font-size: 110px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+.aboutMe {
+    font-weight: 200;
+    font-size:18px;
+    width: 800px;
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subtitleContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.subtitle {
+    font-weight: 300;
+    font-size:30px;
+    padding: 20px;
+    color: black;
+    text-decoration: none;
+}
+.subtitle:hover {
+    text-decoration: underline;
+}
+
+#logo {
+    margin-left:30px;
+    font-weight:200;
+    font-size: 24px;
+}
+
+/* ABOUT STYLES */
+.headerBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+	padding: 10px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    transition: all .15s ease-in-out;
+    padding: 20px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* max-width: 50vw; */
+    font-size: 18px;
+    font-weight: 300;
+    padding:25px
+    /* margin-bottom: 60px; */
+}
+
+.navlabel {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 5px 10px;
+}
+
+.navlabel .label {
+
+    margin-left: 5px;
+
+    font-size: 18px;
+    font-weight: 200;
+
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/* CONTACT STYLES */
+.contactContainer {
+    width: 600px;
+    text-align:center;
+}  
+.contactContent {
+    position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+    font-weight: 400;
+    font-size: 40px;
+    
+}
+.email {
+    color: grey;
+}
+.linkedIn {
+    color: black;
+    text-decoration: none;
+}
+
+.linkedIn:hover {
+    color: grey;
+    text-decoration: underline;
+}
+
+/* PROJECT STYLES */
+
+.projectsContainer {
+    margin-top: 50px;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px #bdbdbd;
+    background-color: white;
+    display: flex;
+    margin-bottom: 20px;
+    overflow: scroll;
+    padding: 3rem 2rem;
+    width: 1000px;
+    margin-left: 250px;
+  }
+
+  .card.horizontal {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .card.vertical {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    margin-bottom: 40px;
+  }
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+  }
+
+  .imageWCaptions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .imageHeader {
+      margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: 'Lato', sans-serif;
+      font-size: 18px;
+  }
+
+  .caption {
+      font-family: 'Lato', sans-serif;
+      font-size: 14px;
+  }
+
+  #sidebar {
+    width: 150px;
+    margin-left: 80px;
+    margin-top:20px;
+    background-color: white;
+    position: fixed;
+  }
+
+  .projectHeader {
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+  }
+
+  #meshEdit {
+      display: none;
+  }
+
+  #pathTracer {
+    display: none;
+  }
+
+  #clothSim {
+    display: none;
+  }
+
+  button {
+      border: none;
+      background: none;
+      /* font-family: 'Open Sans', sans-serif; */
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
+      font-size: 18px;
+      padding: 8px 16px;
+  }
+  button:active { 
+    outline: none; 
+    background-color: grey; 
+    color:white;
+    border-radius: 4px;
+}
+button:hover {
+    outline: none; 
+    background-color: grey; 
+    color:white;
+    border-radius: 4px;
+}
+
+
+  /* ART STYLES */
+
+  .portfolioContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  .portfolioTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 40px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+  }
+  .grid {
+  margin: 0 auto;
+  max-width: 1250px;
+    }
+
+    /* clearfix */
+    .grid:after {
+    content: '';
+    display: block;
+    clear: both;
+    }
+
+  .grid-item {
+    /* width: 35%; */
+    width: 400px;
+    /* float: left; */
+    /* vertical gutter */
+    margin-bottom: 20px;
+    border: 2px solid #333;
+    border-color: hsla(0, 0%, 0%, 0.5);
+    border-radius: 5px;
+  }
+  .elephant {
+    /* width: 30%; */
+    width: 340px;
+  }
+
+  /* #background-ohyos {
+    width: 400px;
+    background-color: black;
+    border-radius: 5px; 
+    height: 546px
+    }
+
+
+    #ohyos-detail {
+        color: #dbbfbc;
+        width: 250px;
+        padding-left: 20px;
+        padding-top: 450px;
+        font-weight: 200
+    }
+    
+    #background-funty {
+        width: 340px;
+        background-color: black;
+        border-radius: 5px; 
+        height: 444px
+        }
+
+    #funty-detail {
+            color: #dbbfbc;
+            width: 300px;
+            padding-left: 20px;
+            padding-top: 350px;
+            font-weight: 200
+    }
+
+    #funty {
+       max-width:100%;
+        max-height:100%;
+        border-radius: 5px;
+    }
+
+    #background-herm {
+        width: 400px;
+        background-color: black;
+        border-radius: 5px; 
+        height: 223px
+        }
+    
+        #herm-detail {
+            color: #dbbfbc;
+            width: 300px;
+            padding-left: 20px;
+            padding-top: 110px;
+            font-weight: 200
+        }
+        #herm {
+            max-width:100%;
+             max-height:100%;
+             border-radius: 5px;
+         }
+        #herm-detail:hover {
+            cursor: pointer;
+        } */
+
+        .hermTitle {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            font-size: 40px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+          } 
+        .hermContainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+  
+        #hermIm {
+            width: 400px;
+            margin:20px;
+            border-radius: 5px;
+            
+        }
+        .hermDescription {
+            width: 400px;
+            margin:20px;
+            font-size: 18px;
+            padding-top: 50px
+
+        }
+  
+
+/* NOODLES STYLES */
+
+.noodlesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.noodlesTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+  }
+
+  .noodlesSubTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+  }
+  .updatesContainer {
+    margin-left: 200px;
+    width: 1000px;
+  }
+  .date {
+    text-decoration: underline;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 50px;
+  }
+
