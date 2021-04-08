@@ -38,7 +38,7 @@ body {
     font-weight: 200;
     font-size: 110px;
     position: absolute;
-    top: 20%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     white-space: nowrap;
@@ -168,9 +168,10 @@ nav {
     background-color: white;
     display: flex;
     margin-bottom: 20px;
-    overflow: scroll;
+    /* overflow: scroll; */
+    overflow-x: hidden;
     padding: 3rem 2rem;
-    width: 1000px;
+    width: 1280px;
     margin-left: 250px;
   }
 

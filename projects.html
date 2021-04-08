@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+        <title>Kathleen Gao</title>
+    <link rel="shortcut icon" type="image/png" href="assets/img/portfolio/circle-cropped.png" />
+    <script src="assets/js/projects.js"></script>
+</head>
+<header>
+    <div class="headerBar">
+        <div id="logo">
+            AIDAN BOYLE
+        </div>
+        <nav>
+            <a href="index.html">
+                <div class="navlabel">
+                    <span class="material-icons-round">
+                        person
+                    </span>
+                    <div class="label">about</div>
+                </div>
+            </a>
+            <a href="projects.html">
+                <div class="navlabel">
+                    <span class="material-icons-round">
+                        code
+                    </span>
+                    <div class="label">projects</div>
+                </div>
+            </a>
+            <a href="contact.html">
+                <div class="navlabel">
+                    <span class="material-icons-round">
+                        email
+                    </span>
+                    <div class="label">contact</div>
+                </div>
+            </a>
+
+        </nav>
+    </div>
+</header>
+
+<body>
+
+    <div class="projectsContainer">
+        <div class="navigationSidebar">
+            <div id="sidebar">
+                <div class="projectHeader">PROJECTS</div>
+                <div id="sidebar-content">
+
+                    <a href="#sdk">
+                        <button onclick="show('sdk')">Maya SDK</button>
+                    </a>
+
+                    <a href="#seam">
+                        <button onclick="show('seam')">Seam Carving</button>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <!--PROJECTS-->
+        <!--MAYA SDK-->
+        <div class="card vertical" id="sdk">
+            <h1 style="margin-bottom: 30px">Maya SDK</h1>
+            <h2>Remembering Fukushima Short Film</h2>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OkqQinfyh_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <p> Responsible for: code! More to come!</p>
+
+        </div>
+
+        <!--Seam Carving-->
+        <div class="card vertical" id="seam">
+            <h1 style="margin-bottom: 30px">Seam Carving</h1>
+            <h2>Overview</h2>
+            <p>In this project, I implemented the basic algorithm presented by Shai Avidan and Ariel Shamir in <em>Seam Carving
+                for Content-Aware Image Resizing</em> (SIGGRAPH). Whereas typical cropping methods fail to consider content when
+                resizing an image, this algorithm first removes the seams (connected paths of pixels running either vertically or
+                horizontally across the image) which it deems of least importance. Below is a GIF of my code in action
+                (ironically, the website I used (ezgif.com) automatically resized each frame to fit the dimensions of the
+                first
+                – regardless, it illustrates the seam selection).</p>
+            <img src="assets/images/seams/process.gif" />
+            <p>In implementing Seam Carving, I first determined the “importance” of each pixel, employing the image’s
+                gradient magnitude as my energy function. Because the gradient magnitude uses Sobel filters to approximate
+                the image’s partial derivatives, low cost pixels represent areas of little change. As such, this energy
+                function prioritizes the removal of seams in homogeneous sections of the image. Below is an example of an
+                image’s gradient magnitude.</p>
+            <img src="assets/images/seams/gradMag.png" />
+            <p>Once every pixel was assigned a cost, I used backtracking to create a cumulative energy matrix, determining
+                the continuous path (seam) which requires the least energy to traverse. This seam was then used to create a
+                Boolean mask which, when applied to the original image, allowed for the pixels’ removal. By repeating this
+                process on the resized result, one can iteratively reduce an image’s width or height by a single pixel until
+                the desired dimension is achieved. I ran the algorithm on various movie stills (taken from film-grab.com).
+                The results are featured below.</p>
+            <h2>Good Results</h2>
+
+            <h3><em>The Lobster</em></h3>
+            <h4>(2015, dir. Yorgos Lanthimos, cin. Thimios Bakatakis)</h4>
+            <table>
+                <tr>
+                    <td align="middle">
+                        <img src="assets/images/ogs/lobster.jpg" />
+                        <figcaption align="middle">Original: 1280 x 688</figcaption>
+                </tr>
+                <tr>
+                  <td align="middle">
+                      <img src="assets/images/seams/lobster500.jpg" />
+                      <figcaption align="middle">Resized: 500 x 688</figcaption>
+                </tr>
+            </table>
+            <h3 align="middle"><em>Shoplifters</em></h3>
+            <h4 align="middle">(2018, dir. Hirokazu Koreeda, cin. Ryuto Kondo)</h4>
+            <table>
+                <tr>
+                    <td align="middle">
+                        <img src="assets/images/ogs/shoplifters.jpg" />
+                        <figcaption align="middle">Original: 1280 x 692</figcaption>
+                </tr>
+                <tr>
+                    <td align="middle">
+                        <img src="assets/images/seams/shop500V.jpg" />
+                        <figcaption align="middle">Resized: 1280 x 500</figcaption>
+                </tr>
+            </table>
+            <h3 align="middle"><em>Burning</em></h3>
+            <h4 align="middle">(2018, dir. Lee Chang-dong, cin. Hong Kyung-pyo)</h4>
+            <table>
+                <tr>
+
+                    <td align="middle">
+                        <img src="assets/images/ogs/burning_wide.jpg" />
+                        <figcaption align="middle">Original: 1280 x 536</figcaption>
+                </tr>
+                <tr>
+                    <td align="middle">
+                        <img src="assets/images/seams/burnWide800.jpg" />
+                        <figcaption align="middle">Resized: 800 x 536</figcaption>
+                </tr>
+            </table>
+            <h3 align="middle"><em>Edward Scissorhands</em></h3>
+            <h4 align="middle">(1990, dir. Tim Burton, cin. Stefan Czapsky)</h4>
+            <table>
+                <tr>
+                    <td align="middle">
+                        <img src="assets/images/ogs/edward_faces.jpg" />
+                        <figcaption align="middle">Original: 1000 x 544</figcaption>
+                </tr>
+                <tr>
+                    <td align="middle">
+                        <img src="assets/images/seams/edFaces800.jpg" />
+                        <figcaption align="middle">Resized: 800 x 544</figcaption>
+                </tr>
+            </table>
+            <h3 align="middle"><em>Burning</em></h3>
+            <h4 align="middle">(2018, dir. Lee Chang-dong, cin. Hong Kyung-pyo)</h4>
+            <table>
+                <tr>
+                    <td align="middle">
+                        <img src="assets/images/ogs/burning_window.jpg" />
+                        <figcaption align="middle">Original: 1280 x 536</figcaption>
+                </tr>
+                <tr>
+                    <td align="middle">
+                        <img src="assets/images/seams/burnWindow1000.jpg" />
+                        <figcaption align="middle">Resized:1000 x 536</figcaption>
+                </tr>
+            </table>
+            <h3 align="middle"><em>Harold and Maude</em></h3>
+            <h4 align="middle">(1971, dir. Hal Ashby, cin. John A. Alonzo)</h4>
+            <table>
+                <tr>
+                    <td align="middle">
+                        <img src="assets/images/ogs/harold.jpg" />
+                        <figcaption align="middle">Original: 999 x 575</figcaption>
+                </tr>
+                <tr>
+                    <td align="middle">
+                        <img src="assets/images/seams/har200V.jpg" />
+                        <figcaption align="middle">Resized: 999 x 200</figcaption>
+                </tr>
+            </table>
+            <h2 align="middle">Bad Results</h2>
+            <h3 align="middle"><em>Burning</em></h3>
+            <h4 align="middle">(2018, dir. Lee Chang-dong, cin. Hong Kyung-pyo)</h4>
+            <table style="width:100%">
+                <tr>
+                    <td align="middle">
+                        <img src="assets/images/ogs/burning_fire.jpg" />
+                        <figcaption align="middle">Original: 1280 x 536</figcaption>
+                </tr>
+                <tr>
+                    <td align="middle">
+                        <img src="assets/images/seams/burnFire800.jpg" />
+                        <figcaption align="middle">Resized: 800 x 536</figcaption>
+                </tr>
+            </table>
+            <h3 align="middle"><em>The Killing of a Sacred Deer</em></h3>
+            <h4 align="middle">(2017, dir. Yorgos Lanthimos, cin. Thimios Bakatakis)</h4>
+            <table>
+                <tr>
+                    <td align="middle">
+                        <img src="assets/images/ogs/deer.jpg" />
+                        <figcaption align="middle">Original: 1280 x 688</figcaption>
+                </tr>
+                <tr>
+                    <td align="middle">
+                        <img src="assets/images/seams/deer800.jpg" />
+                        <figcaption align="middle">Resized: 800 x 688</figcaption>
+                </tr>
+            </table>
+            <h3 align="middle"><em>Anomalisa</em></h3>
+            <h4 align="middle">(2015, dir. Charlie Kaufman and Duke Johnson, cin. Joe Passarelli)</h4>
+            <table>
+                <tr>
+                    <td align="middle">
+                        <img src="assets/images/ogs/anomalisa.jpg" />
+                        <figcaption align="middle">Original: 1280 x 535</figcaption>
+                </tr>
+                <tr>
+                    <td align="middle">
+                        <img src="assets/images/seams/anom500.jpg" />
+                        <figcaption align="middle">Resized: 500 x 535</figcaption>
+                </tr>
+            </table>
+
+            </br>
+            <p>Because this process can be rather slow, I further divided the function into a precompute section and an
+                online section. To implement the former, I resized the image until it was a single pixel in either width or
+                height, saving each seams’ mask into a matrix before removal. With this matrix, the online method can reduce
+                the image to any new dimension (in a matter of seconds) by simply applying the necessary number of masks in
+                order.</p>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
