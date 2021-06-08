@@ -11,7 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
         rel="stylesheet">
-        <title>Kathleen Gao</title>
+        <title>Aidan Boyle</title>
     <link rel="shortcut icon" type="image/png" href="assets/img/portfolio/circle-cropped.png" />
     <script src="assets/js/projects.js"></script>
 </head>
@@ -73,11 +73,18 @@
         <!--MAYA SDK-->
         <div class="card vertical" id="sdk">
             <h1 style="margin-bottom: 30px">Maya SDK</h1>
-            <h2>Remembering Fukushima Short Film</h2>
+            <p>Through the below projects, I aimed to gain familiarity with the maya.cmds Python library.</p>
+            <h2><b>Remembering Fukushima Short Film</b></h2>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/OkqQinfyh_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-            <p> More info to come!</p>
+            <p>To produce this short, I wrote a program which would generate (and subsequently decompose) a block-based city from hand-modeled <b>Faces</b> (planes). The inputs are pictured below.</p>
+            <img src="assets/images/fuku/faces.png" />
+            <p>After readying colored versions of these <b>Faces</b>, the script populates each <b>Street</b> with randomly sized <b>Buildings</b>, themselves assemblages of <b>Blocks</b>. To create each <b>Block</b>, the six necessary <b>Faces</b> are determined, oriented, and united, in accordance with the <b>Block’s</b> relative position within the <b>Building</b>. A subset of these are initialized as rigid bodies with varying “active” frames.</p>
+            <p>A second (much shorter) script was used to prepare cherry blossoms on the hand-modeled tree for an nCloth simulation.</p>
+            <h2><b>topiAria</b></h2>
+            <a href="https://newart.city/show/topiaria"> <img src="assets/images/topiAria/topiAria.png" /> </a>
+            <a href="https://newart.city/show/topiaria">Link to VR Exhibit</a>
+            <p>This Spring, I had the chance to work with a UC Berkeley Orchestra member, crafting a VR exhibit to accompany their music. As the host site had rather limited functionality, and synchronicity was paramount, I sought maximum effect for minimum file size. The result, linked above, was produced entirely through a python script. </p>
 
         </div>
 
@@ -85,25 +92,24 @@
         <div class="card vertical" id="seam">
             <h1 style="margin-bottom: 30px">Seam Carving</h1>
             <h2>Overview</h2>
-            <p>In this project, I implemented the basic algorithm presented by Shai Avidan and Ariel Shamir in <em>Seam Carving
+            <p>In this project, I implement the algorithm presented by Shai Avidan and Ariel Shamir in <em>Seam Carving
                 for Content-Aware Image Resizing</em> (SIGGRAPH). Whereas typical cropping methods fail to consider content when
-                resizing an image, this algorithm first removes the seams (connected paths of pixels running either vertically or
+                resizing an image, this algorithm first removes the <em>seams</em> (connected paths of pixels running either vertically or
                 horizontally across the image) which it deems of least importance. Below is a GIF of my code in action
-                (ironically, the website I used (ezgif.com) automatically resized each frame to fit the dimensions of the
-                first
-                – regardless, it illustrates the seam selection).</p>
+                (ironically, although the seam selection process is still illustrated, ezgif.com automatically resized
+                each frame to fit the initial image dimensions).</p>
             <img src="assets/images/seams/process.gif" />
-            <p>In implementing Seam Carving, I first determined the “importance” of each pixel, employing the image’s
-                gradient magnitude as my energy function. Because the gradient magnitude uses Sobel filters to approximate
+            <p>In implementing Seam Carving, I first determine the “importance” of each pixel, employing the image’s
+                gradient magnitude as my energy function. Because this function uses Sobel filters to approximate
                 the image’s partial derivatives, low cost pixels represent areas of little change. As such, this energy
                 function prioritizes the removal of seams in homogeneous sections of the image. Below is an example of an
                 image’s gradient magnitude.</p>
             <img src="assets/images/seams/gradMag.png" />
-            <p>Once every pixel was assigned a cost, I used backtracking to create a cumulative energy matrix, determining
-                the continuous path (seam) which requires the least energy to traverse. This seam was then used to create a
-                Boolean mask which, when applied to the original image, allowed for the pixels’ removal. By repeating this
+            <p>Once every pixel was assigned a cost, I used backtracking to create a cumulative energy matrix before determining
+                the continuous path (seam) which requires the least energy to traverse. This seam is then used to create a
+                Boolean mask which, when applied to the original image, allows for the pixels’ removal. By repeating this
                 process on the resized result, one can iteratively reduce an image’s width or height by a single pixel until
-                the desired dimension is achieved. I ran the algorithm on various movie stills (taken from film-grab.com).
+                the desired dimension is achieved. I ran the algorithm on various movie stills (sourced from film-grab.com).
                 The results are featured below.</p>
             <h2>Good Results</h2>
 
