@@ -73,16 +73,19 @@
         <!--MAYA SDK-->
         <div class="card vertical" id="sdk">
             <h1 style="margin-bottom: 30px">Maya SDK</h1>
-            <p>Through the below projects, I aimed to gain familiarity with the maya.cmds Python library.</p>
-            <h2><b>Remembering Fukushima Short Film</b></h2>
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/OkqQinfyh_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Through the below projects, I explored the maya.cmds Python library.</p>
+            <div align="middle">
+                <h2>Remembering Fukushima Short Film</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/OkqQinfyh_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
             <p>To produce this short, I wrote a program which would generate (and subsequently decompose) a block-based city from hand-modeled <b>Faces</b> (planes). The inputs are pictured below.</p>
-            <img src="assets/images/fuku/faces.png" />
+            <img style="width: 60%; align-self: center;" src="assets/images/fuku/faces.png" />
             <p>After readying colored versions of these <b>Faces</b>, the script populates each <b>Street</b> with randomly sized <b>Buildings</b>, themselves assemblages of <b>Blocks</b>. To create each <b>Block</b>, the six necessary <b>Faces</b> are determined, oriented, and united, in accordance with the <b>Block’s</b> relative position within the <b>Building</b>. A subset of these are initialized as rigid bodies with varying “active” frames.</p>
             <p>A second (much shorter) script was used to prepare cherry blossoms on the hand-modeled tree for an nCloth simulation.</p>
-            <h2><b>topiAria</b></h2>
-            <a href="https://newart.city/show/topiaria"> <img src="assets/images/topiAria/topiAria.png" /> </a>
+            <h2  align="middle">topiAria</h2>
+            <div align="middle">
+                <a href="https://newart.city/show/topiaria"> <img style="width: 60%;" src="assets/images/topiAria/topiAria.png" /> </a>
+            </div>
             <a href="https://newart.city/show/topiaria">Link to VR Exhibit</a>
             <p>This Spring, I had the chance to work with a UC Berkeley Orchestra member, crafting a VR exhibit to accompany their music. As the host site had rather limited functionality, and synchronicity was paramount, I sought maximum effect for minimum file size. The result, linked above, was produced entirely through a python script. </p>
 
@@ -91,7 +94,7 @@
         <!--Seam Carving-->
         <div class="card vertical" id="seam">
             <h1 style="margin-bottom: 30px">Seam Carving</h1>
-            <h2>Overview</h2>
+            <h2 align="middle">Overview</h2>
             <p>In this project, I implement the algorithm presented by Shai Avidan and Ariel Shamir in <em>Seam Carving
                 for Content-Aware Image Resizing</em> (SIGGRAPH). Whereas typical cropping methods fail to consider content when
                 resizing an image, this algorithm first removes the <em>seams</em> (connected paths of pixels running either vertically or
@@ -111,105 +114,167 @@
                 process on the resized result, one can iteratively reduce an image’s width or height by a single pixel until
                 the desired dimension is achieved. I ran the algorithm on various movie stills (sourced from film-grab.com).
                 The results are featured below.</p>
-            <h2>Good Results</h2>
+            <h2 align="middle">Good Results</h2>
 
-            <h3><em>The Lobster</em></h3>
-            <h4>(2015, dir. Yorgos Lanthimos, cin. Thimios Bakatakis)</h4>
+            <!--THE LOBSTER-->
+            <h3 align="middle"><em>The Lobster</em></h3>
+            <h4 align="middle">(2015, dir. Yorgos Lanthimos, cin. Thimios Bakatakis)</h4>
             <table>
                 <tr>
                     <td align="middle">
-                        <img src="assets/images/ogs/lobster.jpg" />
-                        <figcaption align="middle">Original: 1280 x 688</figcaption>
+                        <div class="imageContainer width">
+                            <img src="assets/images/ogs/lobster.jpg" />
+                            
+                        </div>
+                        <figcaption>Original: 1280 x 688</figcaption>
+                   
                 </tr>
                 <tr>
-                  <td align="middle">
-                      <img src="assets/images/seams/lobster500.jpg" />
-                      <figcaption align="middle">Resized: 500 x 688</figcaption>
+                    <td align="middle">
+                        <div class="imageContainer width">
+                            <img src="assets/images/seams/lobster500.jpg" />
+                            
+                        </div>
+                        <figcaption>Resized: 500 x 688</figcaption>
                 </tr>
             </table>
+            <!-- <ul class="imageRow">
+                <li>
+                        <div class="imageContainer width">
+                            <img src="assets/images/ogs/lobster.jpg" />
+                        </div>
+                        <figcaption>Original: 1280 x 688</figcaption>
+                </li>
+                <li>
+                        <div class="imageContainer width">
+                            <img src="assets/images/seams/lobster500.jpg" />
+                          </div>
+                        <figcaption>Resized: 500 x 688</figcaption>
+                </li>
+            </ul> -->
+
+            <!--SHOPLIFTERS-->
             <h3 align="middle"><em>Shoplifters</em></h3>
             <h4 align="middle">(2018, dir. Hirokazu Koreeda, cin. Ryuto Kondo)</h4>
             <table>
                 <tr>
                     <td align="middle">
-                        <img src="assets/images/ogs/shoplifters.jpg" />
-                        <figcaption align="middle">Original: 1280 x 692</figcaption>
+                        <div class="imageContainer height shop" style="margin-top: 70px;">
+                            <img src="assets/images/ogs/shoplifters.jpg" />
+                            
+                        </div>
+                        <figcaption style="margin-top: 60px">Original: 1280 x 692</figcaption>
+                   
                 </tr>
                 <tr>
                     <td align="middle">
-                        <img src="assets/images/seams/shop500V.jpg" />
-                        <figcaption align="middle">Resized: 1280 x 500</figcaption>
+                        <div class="imageContainer height shop">
+                            <img src="assets/images/seams/shop500V.jpg" />
+                            
+                        </div>
+                        <figcaption>Resized: 1280 x 500</figcaption>
                 </tr>
             </table>
+            
+            <!--BURNING-->
             <h3 align="middle"><em>Burning</em></h3>
             <h4 align="middle">(2018, dir. Lee Chang-dong, cin. Hong Kyung-pyo)</h4>
+
             <table>
                 <tr>
 
                     <td align="middle">
-                        <img src="assets/images/ogs/burning_wide.jpg" />
-                        <figcaption align="middle">Original: 1280 x 536</figcaption>
+                        <div class="imageContainer width">
+                            <img src="assets/images/ogs/burning_wide.jpg" />
+                        </div>
+                        <figcaption>Original: 1280 x 536</figcaption>
                 </tr>
                 <tr>
                     <td align="middle">
-                        <img src="assets/images/seams/burnWide800.jpg" />
-                        <figcaption align="middle">Resized: 800 x 536</figcaption>
+                        <div class="imageContainer width">
+                            <img src="assets/images/seams/burnWide800.jpg" />
+                        </div>
+                        <figcaption>Resized: 800 x 536</figcaption>
                 </tr>
             </table>
+
+            <!--EDWARD SCISSORHANDS-->
             <h3 align="middle"><em>Edward Scissorhands</em></h3>
             <h4 align="middle">(1990, dir. Tim Burton, cin. Stefan Czapsky)</h4>
+            
             <table>
                 <tr>
                     <td align="middle">
-                        <img src="assets/images/ogs/edward_faces.jpg" />
-                        <figcaption align="middle">Original: 1000 x 544</figcaption>
+                        <div class="imageContainer width">
+                            <img src="assets/images/ogs/edward_faces.jpg" />
+                        </div>
+                        <figcaption>Original: 1000 x 544</figcaption>
                 </tr>
                 <tr>
                     <td align="middle">
-                        <img src="assets/images/seams/edFaces800.jpg" />
-                        <figcaption align="middle">Resized: 800 x 544</figcaption>
+                        <div class="imageContainer width">
+                            <img src="assets/images/seams/edFaces800.jpg" />
+                        </div>
+                        <figcaption>Resized: 800 x 544</figcaption>
                 </tr>
             </table>
+
+            <!--BURNING-->
             <h3 align="middle"><em>Burning</em></h3>
             <h4 align="middle">(2018, dir. Lee Chang-dong, cin. Hong Kyung-pyo)</h4>
             <table>
                 <tr>
                     <td align="middle">
-                        <img src="assets/images/ogs/burning_window.jpg" />
-                        <figcaption align="middle">Original: 1280 x 536</figcaption>
+                        <div class="imageContainer width">
+                            <img src="assets/images/ogs/burning_window.jpg" />
+                        </div>
+                        <figcaption>Original: 1280 x 536</figcaption>
                 </tr>
                 <tr>
                     <td align="middle">
-                        <img src="assets/images/seams/burnWindow1000.jpg" />
-                        <figcaption align="middle">Resized:1000 x 536</figcaption>
+                        <div class="imageContainer width">
+                            <img src="assets/images/seams/burnWindow1000.jpg" />
+                        </div>
+                        <figcaption>Resized: 1000 x 536</figcaption>
                 </tr>
             </table>
+           
+            <!--HAROLD AND MAUDE-->
             <h3 align="middle"><em>Harold and Maude</em></h3>
             <h4 align="middle">(1971, dir. Hal Ashby, cin. John A. Alonzo)</h4>
             <table>
                 <tr>
                     <td align="middle">
-                        <img src="assets/images/ogs/harold.jpg" />
-                        <figcaption align="middle">Original: 999 x 575</figcaption>
+                        <div class="imageContainer height hm" style="margin-top: 150px;">
+                            <img src="assets/images/ogs/harold.jpg" />
+                        </div>
+                        <figcaption align="middle" style="margin-top: 140px;">Original: 999 x 575</figcaption>
                 </tr>
                 <tr>
                     <td align="middle">
-                        <img src="assets/images/seams/har200V.jpg" />
+                        <div class="imageContainer height hm">
+                            <img src="assets/images/seams/har200V.jpg" />
+                        </div>
                         <figcaption align="middle">Resized: 999 x 200</figcaption>
                 </tr>
             </table>
+
             <h2 align="middle">Bad Results</h2>
             <h3 align="middle"><em>Burning</em></h3>
             <h4 align="middle">(2018, dir. Lee Chang-dong, cin. Hong Kyung-pyo)</h4>
             <table style="width:100%">
                 <tr>
                     <td align="middle">
-                        <img src="assets/images/ogs/burning_fire.jpg" />
+                        <div class="imageContainer width">
+                            <img src="assets/images/ogs/burning_fire.jpg" />
+                        </div>
                         <figcaption align="middle">Original: 1280 x 536</figcaption>
                 </tr>
                 <tr>
                     <td align="middle">
-                        <img src="assets/images/seams/burnFire800.jpg" />
+                        <div class="imageContainer width">
+                            <img src="assets/images/seams/burnFire800.jpg" />
+                        </div>
                         <figcaption align="middle">Resized: 800 x 536</figcaption>
                 </tr>
             </table>
@@ -218,12 +283,16 @@
             <table>
                 <tr>
                     <td align="middle">
-                        <img src="assets/images/ogs/deer.jpg" />
+                        <div class="imageContainer width">
+                            <img src="assets/images/ogs/deer.jpg" />
+                        </div>
                         <figcaption align="middle">Original: 1280 x 688</figcaption>
                 </tr>
                 <tr>
                     <td align="middle">
-                        <img src="assets/images/seams/deer800.jpg" />
+                        <div class="imageContainer width">
+                            <img src="assets/images/seams/deer800.jpg" />
+                        </div>
                         <figcaption align="middle">Resized: 800 x 688</figcaption>
                 </tr>
             </table>
@@ -232,12 +301,16 @@
             <table>
                 <tr>
                     <td align="middle">
-                        <img src="assets/images/ogs/anomalisa.jpg" />
+                        <div class="imageContainer width">
+                            <img src="assets/images/ogs/anomalisa.jpg" />
+                        </div>
                         <figcaption align="middle">Original: 1280 x 535</figcaption>
                 </tr>
                 <tr>
                     <td align="middle">
-                        <img src="assets/images/seams/anom500.jpg" />
+                        <div class="imageContainer width">
+                            <img src="assets/images/seams/anom500.jpg" />
+                        </div>
                         <figcaption align="middle">Resized: 500 x 535</figcaption>
                 </tr>
             </table>

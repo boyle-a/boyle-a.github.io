@@ -10,14 +10,24 @@ h1 {
 
 h2 {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    font-size: 24px;
+    font-weight: 100;
+    font-size: 36px;
+    margin-top: 50px;
 }
 
 h3 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    margin:10px;
+    margin-top: 30px;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin:10px;
 }
 
 
@@ -168,10 +178,10 @@ nav {
     background-color: white;
     display: flex;
     margin-bottom: 20px;
-    /* overflow: scroll; */
-    overflow-x: hidden;
+    overflow: scroll;
+    /* overflow-x: hidden; */
     padding: 3rem 2rem;
-    width: 1280px;
+    width: 1000px;
     margin-left: 250px;
   }
 
@@ -187,11 +197,62 @@ nav {
     margin-bottom: 40px;
   }
   .imageContainer {
+    
+  }
+
+  .imageContainer.width {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
-
+    margin-top: 20px;
+    width: 200px;
+    height: 370px;
   }
+  .imageContainer.height.shop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    margin-top: 20px;
+    width: 700px;
+    height: 270px;
+  }
+
+  .imageContainer.height.hm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    margin-top: 20px;
+    width: 700px;
+    height: 130px;
+  }
+  
+  /* td {
+    height:400px; 
+  } */
+
+  .imageContainer.width img {
+    width: auto;
+    height: 100%;
+}
+.imageContainer.height img {
+    width: 100%;
+    height: auto;
+}
+.imageRow {
+    display: flex;
+    justify-content: center;
+    margin-left:120px;
+    margin-top: -5px;
+}
+.imageRow li {
+    display: inline-block;
+    margin-left: 80px;
+    margin-right: 180px;
+}
+
+figcaption {
+    text-align: center;
+    margin: 10px;
+}
 
   .imageWCaptions {
       display: flex;
@@ -226,15 +287,7 @@ nav {
     font-weight: 200;
   }
 
-  #meshEdit {
-      display: none;
-  }
-
-  #pathTracer {
-    display: none;
-  }
-
-  #clothSim {
+  #seam {
     display: none;
   }
 
@@ -245,7 +298,7 @@ nav {
       font-family: 'Montserrat', sans-serif;
       font-weight: 200;
       font-size: 18px;
-      padding: 8px 16px;
+      padding: 8px 10px;
   }
   button:active {
     outline: none;
@@ -259,165 +312,3 @@ button:hover {
     color:white;
     border-radius: 4px;
 }
-
-
-  /* ART STYLES */
-
-  .portfolioContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-  .portfolioTitle {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
-    font-size: 40px;
-      margin-top: 50px;
-      margin-bottom: 20px;
-  }
-  .grid {
-  margin: 0 auto;
-  max-width: 1250px;
-    }
-
-    /* clearfix */
-    .grid:after {
-    content: '';
-    display: block;
-    clear: both;
-    }
-
-  .grid-item {
-    /* width: 35%; */
-    width: 400px;
-    /* float: left; */
-    /* vertical gutter */
-    margin-bottom: 20px;
-    border: 2px solid #333;
-    border-color: hsla(0, 0%, 0%, 0.5);
-    border-radius: 5px;
-  }
-  .elephant {
-    /* width: 30%; */
-    width: 340px;
-  }
-
-  /* #background-ohyos {
-    width: 400px;
-    background-color: black;
-    border-radius: 5px;
-    height: 546px
-    }
-
-
-    #ohyos-detail {
-        color: #dbbfbc;
-        width: 250px;
-        padding-left: 20px;
-        padding-top: 450px;
-        font-weight: 200
-    }
-
-    #background-funty {
-        width: 340px;
-        background-color: black;
-        border-radius: 5px;
-        height: 444px
-        }
-
-    #funty-detail {
-            color: #dbbfbc;
-            width: 300px;
-            padding-left: 20px;
-            padding-top: 350px;
-            font-weight: 200
-    }
-
-    #funty {
-       max-width:100%;
-        max-height:100%;
-        border-radius: 5px;
-    }
-
-    #background-herm {
-        width: 400px;
-        background-color: black;
-        border-radius: 5px;
-        height: 223px
-        }
-
-        #herm-detail {
-            color: #dbbfbc;
-            width: 300px;
-            padding-left: 20px;
-            padding-top: 110px;
-            font-weight: 200
-        }
-        #herm {
-            max-width:100%;
-             max-height:100%;
-             border-radius: 5px;
-         }
-        #herm-detail:hover {
-            cursor: pointer;
-        } */
-
-        .hermTitle {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 200;
-            font-size: 40px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-          }
-        .hermContainer {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-        }
-
-        #hermIm {
-            width: 400px;
-            margin:20px;
-            border-radius: 5px;
-
-        }
-        .hermDescription {
-            width: 400px;
-            margin:20px;
-            font-size: 18px;
-            padding-top: 50px
-
-        }
-
-
-/* NOODLES STYLES */
-
-.noodlesContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.noodlesTitle {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 40px;
-      margin-top: 50px;
-      margin-bottom: 20px;
-  }
-
-  .noodlesSubTitle {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-  }
-  .updatesContainer {
-    margin-left: 200px;
-    width: 1000px;
-  }
-  .date {
-    text-decoration: underline;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    margin-top: 50px;
-  }
