@@ -230,8 +230,8 @@ nav {
     background-color: white;
     display: flex;
     margin-bottom: 20px;
-    overflow: scroll;
-    /* overflow-x: hidden; */
+    /* overflow: scroll; */
+    overflow-x: hidden;
     padding: 3rem 2rem;
     /* width: 1000px; */
     margin-left: 250px;
