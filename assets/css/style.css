@@ -132,6 +132,10 @@ body {
     font-weight:200;
     font-size: 24px;
 }
+/* #logo:hover {
+    text-decoration: underline #A089B8;
+    text-decoration-thickness: 0.1em;
+  } */
 
 /* ABOUT STYLES */
 .headerBar {
@@ -154,6 +158,12 @@ a {
     transition: all .15s ease-in-out;
     padding: 20px;
 }
+
+a:hover {
+    transform: scale(1.2);
+    text-decoration: none;
+  }
+  
 nav {
     display: flex;
     justify-content: space-between;
@@ -182,10 +192,10 @@ nav {
 
 }
 
-.label:hover {
+/* .label:hover {
     text-decoration: underline solid #8662AA;
-    text-decoration-thickness: 0.2em;
-}
+    text-decoration-thickness: 0.15em;
+} */
 
 .contentContainer {
     display: flex;
@@ -230,7 +240,7 @@ nav {
     background-color: white;
     display: flex;
     margin-bottom: 20px;
-    overflow: scroll;
+    overflow: hidden;
     /* overflow-x: hidden; */
     padding: 3rem 2rem;
     /* width: 1000px; */
@@ -359,8 +369,6 @@ figcaption {
   button {
       border: none;
       background: none;
-      /* font-family: 'Open Sans', sans-serif; */
-      /* font-family: 'Montserrat', sans-serif; */
       font-family: 'sofia-pro', sans-serif;
       font-weight: 200;
       font-size: 16px;
@@ -379,3 +387,26 @@ button:hover {
     color:white;
     border-radius: 4px;
 }
+
+#topiContainer {
+    height: 550px;
+    width: 800px;
+    margin-left: auto;
+  margin-right: auto;
+}
+#topiContainer:hover {
+    cursor: pointer;
+}
+
+.topi {
+    background: url("../images/topiAria/topiAria.png") no-repeat;
+    background-size: contain;
+    height: 550px;
+    margin-left: 30px;
+    transition: 0.5s ease-in-out;
+}
+.topi:hover {
+    background: url("../images/topiAria/topiAria_bwText.png") no-repeat;
+    background-size: contain;
+}
+

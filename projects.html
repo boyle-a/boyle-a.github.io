@@ -12,17 +12,16 @@
         href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
         rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/ejl7cyp.css">
-
-
         <title>Aidan Boyle</title>
+
     <link rel="shortcut icon" type="image/png" href="assets/images/a.png" />
-    <script src="assets/js/projects.js"></script>
+    
 </head>
 <header>
     <div class="headerBar">
-        <div id="logo">
-            AIDAN BOYLE
-        </div>
+        <a id="logo" href="index.html">
+                AIDAN BOYLE
+        </a>
         <nav>
             <a href="index.html">
                 <div class="navlabel">
@@ -86,10 +85,16 @@
             <p>After readying colored versions of these <b>Faces</b>, the script populates each <b>Street</b> with randomly sized <b>Buildings</b>, themselves assemblages of <b>Blocks</b>. To create each <b>Block</b>, the six necessary <b>Faces</b> are determined, oriented, and united, in accordance with the <b>Block’s</b> relative position within the <b>Building</b>. A subset of these are initialized as rigid bodies with varying “active” frames.</p>
             <p>A second (much shorter) script was used to prepare cherry blossoms on the hand-modeled tree for an nCloth simulation.</p>
             <h2  align="middle"><span style="color: #A089B8;">———</span>  topiAria  <span style="color: #A089B8;">———</span></h2>
-            <div align="middle">
-                <a href="https://newart.city/show/topiaria"> <img style="width: 60%;" src="assets/images/topiAria/topiAria.png" /> </a>
+            <!-- <div id="topiContainer" align="middle">
+                <img id="topiaria" src="assets/images/topiAria/topiAria.png" />
+                <img id= "topiariaBW" src="assets/images/topiAria/topiAria_bwText.png" /> 
+                
+            </div> -->
+            <div id="topiContainer">
+                <div class="topi" ></div>
             </div>
-            <a class="NAC" align="middle" href="https://newart.city/show/topiaria">Link to VR Exhibit</a>
+            <!-- </div> -->
+            <!-- <a class="NAC" align="middle" href="https://newart.city/show/topiaria">Link to VR Exhibit</a> -->
             <p>This Spring, I had the chance to work with a UC Berkeley Orchestra member, crafting a VR exhibit to accompany their music. As the host site had rather limited functionality, and synchronicity was paramount, I sought maximum effect for minimum file size. The result, linked above, was produced entirely through a python script. </p>
 
         </div>
@@ -141,21 +146,6 @@
                         <figcaption>Resized: 500 x 688</figcaption>
                 </tr>
             </table>
-            <!-- <ul class="imageRow">
-                <li>
-                        <div class="imageContainer width">
-                            <img src="assets/images/ogs/lobster.jpg" />
-                        </div>
-                        <figcaption>Original: 1280 x 688</figcaption>
-                </li>
-                <li>
-                        <div class="imageContainer width">
-                            <img src="assets/images/seams/lobster500.jpg" />
-                          </div>
-                        <figcaption>Resized: 500 x 688</figcaption>
-                </li>
-            </ul> -->
-
             <!--SHOPLIFTERS-->
             <h3 align="middle"><em>Shoplifters</em></h3>
             <h4 align="middle">(2018, dir. Hirokazu Koreeda, cin. Ryuto Kondo)</h4>
@@ -312,7 +302,7 @@
                 <tr>
                     <td align="middle">
                         <div class="imageContainer width">
-                            <img src="assets/images/seams/anom500.jpg" />
+                            <img style="transform: scaleX(-1);" src="assets/images/seams/anom500.jpg" />
                         </div>
                         <figcaption align="middle">Resized: 500 x 535</figcaption>
                 </tr>
@@ -329,7 +319,7 @@
 
     </div>
 
-
+    <script src="assets/js/projects.js"></script>
 </body>
 
 </html>
