@@ -76,14 +76,14 @@
         <div class="card vertical" id="seam">
             <h1 class="animation">Seam Carving</h1>
             <h2 class="animation" align="middle"><span style="color: #A089B8;">———</span>  Overview  <span style="color: #A089B8;">———</span></h2>
-            <p class="animation" >In this project, I implement the algorithm presented by Shai Avidan and Ariel Shamir in <em>Seam Carving
+            <p class="animation" >In this project, I implemented the algorithm presented by Shai Avidan and Ariel Shamir in <em>Seam Carving
                 for Content-Aware Image Resizing</em> (SIGGRAPH). Whereas typical cropping methods fail to consider content when
                 resizing an image, this algorithm first removes the <em>seams</em> (connected paths of pixels running either vertically or
                 horizontally across the image) which it deems of least importance. Below is a GIF of my code in action
                 (ironically, although the seam selection process is still illustrated, ezgif.com automatically resized
                 each frame to fit the initial image dimensions).</p>
             <img class="animation" src="assets/images/seams/process.gif" />
-            <p>In implementing Seam Carving, I first determine the “importance” of each pixel, employing the image’s
+            <p>In implementing Seam Carving, I first determined the “importance” of each pixel, employing the image’s
                 gradient magnitude as my energy function. Because this function uses Sobel filters to approximate
                 the image’s partial derivatives, low cost pixels represent areas of little change. As such, this energy
                 function prioritizes the removal of seams in homogeneous sections of the image. Below is an example of an
